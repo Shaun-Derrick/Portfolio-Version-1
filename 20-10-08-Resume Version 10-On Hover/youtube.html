@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body onload="typeWriter()">
+        <div style="background-color: #0B0C10; color: limegreen">
+            <audio controls autoplay>
+                <source src="/audio/houston_problem.mp3">
+            </audio>
+            <div>
+            <!--Page 3-->
+            <div style="float: right; margin-right: 150px;">
+            <h2>STAGE 4<h2>
+            </div>
+            <div style="padding-top: 30; padding-left: 25;">
+        <h1>Contact</h1>
+        </div>
+        <div style="margin-top: 0px; margin-left: 60px; font-size: xx-large;">
+            <strong>
+         <p id="demonstration"></p>
+         <script>
+             let i = 0;
+             let txt = 'MISSION CONTROL................................................................................................................................................................................................................................................';
+             let speed = 65;
+             
+             function typeWriter() {
+               if (i < txt.length) {
+                 document.getElementById("demonstration").innerHTML += txt.charAt(i);
+                 i++;
+                 setTimeout(typeWriter, speed);
+               }
+             }
+             </script>
+             </strong>
+        </div>
+        </div>
+        <div id='player' style="margin-left: 25%";></div>
+
+        <script>
+ 
+          // 2. This code loads the IFrame Player API code asynchronously.
+          var tag = document.createElement('script');
+    
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+          // 3. This function creates an <iframe> (and YouTube player)
+          //    after the API code downloads.
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+              height: '500',
+              width: '1000',
+              videoId: 'EPyl1LgNtoQ',
+              playerVars:{'start':15, 'mute':1, 'controls':0, 'modestbranding': 0},
+              events: {
+                'onReady': onPlayerReady
+              }
+            });
+          }
+          // 4. The API will call this function when the video player is ready.
+          function onPlayerReady(event) {
+            setTimeout (function() {
+            event.target.playVideo();
+            }, 16000);
+          }
+        </script>
+        <div>
+          <div style="
+          margin-top: 0px; margin-left: 200px; padding-bottom: 200px;">
+          <!--Space Station Video-->
+          <h1>Do you have a challenge I can help you overcome?  I can be contacted by:</h1>
+          <div style= "font-size: x-large;">
+              <ul>
+                  <li>Phone: +1-403-828-5982</li>
+                  <li>Email: derrickshaun@gmail.com</li>
+              </ul>
+          </div>
+          <div style="margin-top: 100px; text-align: center; margin-bottom: 100px; font-size: x-large;">
+              You can view my LinkedIn profile as well as my completed and ongoing technical work through the links attached to the icons. </div>
+          <!--Add links to LinkedIn and GitHub-->
+          <div class=img>
+              <figure>
+              <a href="https://github.com/Shaun-Derrick"><img src= "/images/github.jpg" alt="Github-logo" style="width:50px;height:50px;"></a>
+              <figcaption>Github</figcaption>
+              </figure>
+              
+              <figure>
+              <a href="https://www.linkedin.com/in/shaun-derrick-11642755/"><img src="/images/linkedin.jpg" alt="Linkedin-logo" style="width:50px;height:50px;"></a>
+              <figcaption>Linkedin</figcaption>
+              </figure>
+              </div>
+              <div class="nav_container">
+                  <nav>
+                      <ul class="nav_links">
+                          <li><a href=index.html style= "color:limegreen"><h2>HOME</h2></a></li>
+                          <li><a href=education.html style="color: limegreen;"><h2>STAGE 1</br>GENESIS</br>REV 100.0</h2></a></li>
+                          <li><a href=work.html style="color: limegreen;"><h2>STAGE 2</br>EVOLUTION</br>REV 100.1</h2></a></li>
+                          <li><a href=growth.html style="color: limegreen;"><h2>STAGE 3</br>METAMORPHOSIS</br>REV 100.∞</h2></a></li>
+                          <li><a href=contact.html style="color: limegreen;"><h2>STAGE 4</br>CONTACT</h2></a></li>
+                      </ul>
+                 </nav>
+              </div>
+      </div>
+      </div>
+      </div>
+  </body>
+</html>
